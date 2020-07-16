@@ -3,7 +3,7 @@
 var userNumber = prompt('What\'s your number ?');
 window.console.log(userNumber);
 
-// 2--  Write a program that takes a number from user then print yes f that number can divide by 3 and 4 otherwise print no.
+// 2--  Write a program that takes a number from user then print yes if that number can divide by 3 and 4, otherwise print no.
 
 var userNum = prompt('Enter Your number, please.');
 
@@ -24,17 +24,21 @@ else {
 
 var userNum1 = prompt('Enter Your first number, please.');
 var userNum2 = prompt('Enter Your seconed number, please.');
-
+// Check first number
 if (userNum1 > userNum2) {
+
     window.console.log(userNum1);
-} else if (userNum1 < userNum2) {
+
+} else if (userNum1 < userNum2) { // Check seconed number
+
     window.console.log(userNum2);
+    // Check other Cases
 } else {
     window.console.log('There\'s no max Number');
 }
 
 
-// 4--  Write a program that allows the user to insert an integer then print negatice if it is negative number otherwise print positive.
+// 4--  Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
 
 var userCase = prompt('Enter Your number, please.');
 
@@ -47,7 +51,7 @@ else {
     window.console.log('negative');
 }
 
-// 5-- Write a program that takes 3 integers from user then print the max element and the min element.
+// 5-- Write a program that takes 3 integers from the user then print the max element and the min element.
 
 var userN1 = prompt('Enter Your first number, please.');
 var userN2 = prompt('Enter Your seconed number, please.');
@@ -87,7 +91,7 @@ if (userN1 > userN2 && userN1 > userN3) {
 
 }
 
-// 6-- Write a program that allows the user to insert integer number then check if a number is oven or odd.
+// 6-- Write a program that allows the user to insert an integer number then check if the number is oven or odd.
 
 var numberUser = prompt('Enter Your number, please.');
 
@@ -100,7 +104,7 @@ if ((numberUser % 2) == 0) {
     window.console.log('You Number is odd');
 }
 
-// [7-] 8- write a program that take a character from user then if it is vowel chars (a, e, i, o, u) then print vowel other wise print consonant.
+// [7-] 8- write a program that take a character from the user then check if it is vowel chars (a, e, i, o, u), print vowel otherwise print consonant.
 
 var userChar = prompt('Please insert your character.');
 
@@ -141,7 +145,7 @@ else {
 }
 
 
-// 9 - write a program that allows user to insert integer then print all numbers between 1 to that's number.
+// 9 - write a program that allows the user to insert an integer then print all numbers between 1 to that's number.
 
 var userEntry = prompt('Please insert your Number.');
 
@@ -151,7 +155,7 @@ for (let i = 1; i <= Number(userEntry); i++) {
 
 
 
-// 10- Write a program that allows user to insert integer then print a multiplication table up to 12.
+// 10- Write a program that allows the user to insert an integer then print a multiplication table up to 12.
 
 var userEntry = prompt('Please insert your Number.');
 
@@ -161,7 +165,7 @@ for (let i = 1; i <= 12; i++) {
 
 
 
-// 11-  Write a program that allows to the user to insert number then print all even numbers between 1 to this number.
+// 11-  Write a program that allows to the user to insert a number then print all even numbers between 1 to this number.
 
 var userEntry = prompt('Please insert your Number.');
 
@@ -172,7 +176,7 @@ for (let i = 1; i <= Number(userEntry); i++) {
     }
 }
 
-// 12- Write a program that take two integers then prin the powert
+// 12- Write a program that takes two integers then print the power.
 
 
 var userNumb = prompt('Enter Your number, please.');
