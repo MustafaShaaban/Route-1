@@ -1,0 +1,480 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Alegreya', serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    /*  background-color: tomato;*/
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/** Header **/
+
+.header {
+    background-image: url(./images/drew-coffman-1872.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 125%;
+
+}
+
+.MainNav {
+    /*** position: fixed;  <<< enable this if u wanna fix the nav ****/
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo {
+    width: 180px;
+    height: 50px;
+    margin-top: 20px;
+    float: left;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/** Header > Menu **/
+
+.active {
+    border-top: 4px solid #8e7754;
+}
+
+.nav-menu {
+    width: 50%;
+    float: right;
+    text-align: right;
+    font-family: 'Alegreya', serif;
+
+
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin-top: 0px;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    padding: 25px 17px;
+}
+
+/**  Header > Welcome Msg **/
+
+.mini-container {
+    margin: 50px auto;
+    width: 62%;
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #fff;
+
+}
+
+.mini-container p {
+    font-size: 25px;
+    padding: 15px;
+    margin: 5px;
+    line-height: 37px;
+
+}
+
+.mini-container h1 {
+    font-size: 75px;
+    font-family: 'Alegreya', serif;
+    margin: 10px;
+}
+
+/** header > welcome message > buttons **/
+
+.mini-container button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 18px;
+}
+
+.lrn {
+    background-color: #8e7754;
+    border: transparent;
+    border: 2px solid #8e7754;
+    /** << to take the same dimensions like the other button **/
+}
+
+.cnt {
+    background-color: transparent;
+    margin-left: 20px;
+    border: 2px solid #fff;
+}
+
+/** Header > .mini-container > useless circle at this moment **/
+.useless-circ {
+    width: 30px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    margin: 100px auto;
+
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    margin-top: 5px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+
+/** Who we are **/
+
+.who {
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+.who-image {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+}
+
+
+.who-image img {
+    width: 90%;
+}
+
+.who-details {
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    margin-top: 10px;
+}
+
+
+.who-details h2 {
+    font-family: 'Alegreya', serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: #303030;
+
+    overflow: hidden;
+}
+
+
+.whoweare {
+    font-size: 18px;
+    line-height: 35px;
+    color: #686868;
+}
+
+
+.details-imgs,
+.details-p {
+    /* display: inline-block; */
+    float: left;
+    box-sizing: border-box;
+    line-height: 10px;
+    margin-top: 25px;
+
+
+}
+
+.details-imgs {
+    width: 10%;
+    /* border: 2px solid #888; */
+    height: 40px;
+
+}
+
+.details-imgs img {
+    border-radius: 50%;
+    height: 100%;
+}
+
+
+.details-p {
+    width: 85%;
+    color: #686868;
+    /* border: 2px solid #888; */
+    height: 40px;
+
+}
+
+
+
+
+/** Location **/
+
+.location {
+    overflow: hidden;
+    margin-top: 90px;
+    background-color: #f8f8f8;
+}
+
+.location-image {
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+
+.location-image img {
+    width: 90%;
+}
+
+.location-details {
+    box-sizing: border-box;
+    width: 45%;
+    float: left;
+    margin-top: 20px;
+    padding-top: 100px;
+
+}
+
+
+.location-details h2 {
+    font-family: 'Alegreya', serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: #303030;
+}
+
+
+.location-pg {
+    font-size: 17px;
+    line-height: 35px;
+    color: #686868;
+}
+
+
+
+/**  Baking section  **/
+
+.baking {
+    margin-top: 80px;
+
+}
+
+.head-msg {
+    text-align: center;
+    margin: auto;
+
+}
+
+.head-msg h2 {
+    font-size: 30px;
+    font-weight: 400;
+
+}
+
+.head-msg p {
+    color: #888
+}
+
+.baking-imgs {
+    overflow: hidden;
+    margin: 50px 0px;
+}
+
+.item1,
+.item2,
+.item3 {
+    width: 30%;
+    float: left;
+    margin: 0px 20px;
+    text-align: center;
+
+
+}
+
+.item1-img img,
+.item2-img img,
+.item3-img img {
+    width: 95%;
+}
+
+
+.item1 h3,
+.item2 h3,
+.item3 h3 {
+    font-size: 23px;
+    margin-bottom: 30px;
+    color: #303030;
+    font-weight: 400;
+}
+
+
+.item1 p,
+.item2 p,
+.item3 p {
+    color: #686868;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+
+/** Map section **/
+
+.google-map {
+    overflow: hidden;
+    margin-top: 90px;
+    background-color: #f8f8f8;
+}
+
+.gmaps-image {
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+
+.gmaps-image img {
+    width: 90%;
+}
+
+.google-map-details {
+    box-sizing: border-box;
+    width: 45%;
+    float: left;
+    margin-top: 20px;
+    padding-top: 20px;
+
+}
+
+
+.google-map-details h2 {
+    font-family: 'Alegreya', serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: #303030;
+}
+
+
+.gmaps-pg {
+    font-size: 17px;
+    line-height: 35px;
+    color: #686868;
+}
+
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 565px;
+    width: 525px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 525px;
+    width: 565px;
+}
+
+.contact-list {
+    padding-left: 30px;
+    color: #888;
+}
+
+.contact-list p {
+    padding: 10px 0px;
+}
+
+/* About us */
+
+.about {
+    overflow: hidden;
+    background-color: #403d38;
+    padding: 40px 0px;
+}
+
+.column1,
+.column2,
+.column3,
+.column4 {
+    width: 23%;
+    /* border: 2px solid #888; */
+    /** << debug **/
+    float: left;
+    margin: 0px 10px;
+    color: #888;
+}
+
+.column1 h3,
+.column2 h3,
+.column3 h3,
+.column4 h3 {
+    color: #fff;
+    font-weight: 400;
+}
+
+
+.column1 p {
+    line-height: 30px;
+}
+
+
+.column2 ul,
+.column3 ul,
+.column4 ul {
+    padding-left: 20px;
+}
+
+.column2 ul li,
+.column3 ul li,
+.column4 ul li {
+    padding-bottom: 15px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #88888838;
+
+}
+
+.column4 {
+    background-image: url(/images/contact-details-map.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/** footer **/
+
+
+.pagefooter {
+    background-color: #353330;
+    text-align: center;
+    padding: 50px;
+}
+
+.pagefooter p {
+    color: #777;
+}

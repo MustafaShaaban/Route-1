@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>User Form</title>
+</head>
+
+<body>
+    <form>
+        <fieldset style="background-color: #257722;">
+            <legend style="background-color:#aca6bd">Personal Data</legend>
+            <fieldset style="background-color:#6c829e">
+                <legend style="background-color:#255669;color:#fff;"><br><br>Your Name<br><br><br></legend>
+                <br><br>
+
+                <!-- Table for First/seconed Name-->
+                <table>
+                    <tr>
+                        <td><label for="fname">First Name </label></td>
+                        <td>:</td>
+                        <td><input type="text" name="fname" placeholder="ex: Wael"></td>
+                        78787
+                    </tr>
+                    <tr>
+                        <td><label for="sname">Seconed Name </label></td>
+                        <td>:</td>
+                        <td><input type="text" name="sname" placeholder="ex :Mohamed"></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <br>
+            <br>
+            <br>
+
+            <!-- Table For phone/email/pass-->
+
+            <table>
+                <tr>
+                    <td> <label for="phone"><strong>Your phone </strong></label></td>
+                    <td>:</td>
+                    <td> <input type="number" name="phone"></td>
+                </tr>
+                <tr>
+                    <td> <label for="email"><strong>Your Email </strong></label></td>
+                    <td>:</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td> <label for="pass"><strong>Password</strong></label></td>
+                    <td>:</td>
+                    <td> <input type="password" name="pass"></td>
+                </tr>
+                <tr>
+                    <td> <label for="repass"><strong>Re-Password </strong></label></td>
+                    <td>:</td>
+                    <td> <input type="password" name="repass"></td>
+                </tr>
+                <tr>
+                    <td> <label for="birth"><strong>Birthday </strong></label></td>
+                    <td>:</td>
+                    <td> <input type="date" name="birth"></td>
+                </tr>
+            </table>
+
+
+
+            <br>
+            <br>
+
+
+            <!-- rest of options-->
+
+            <input type="radio" name="gender" value="Male">
+            <label for="gender">Male</label>
+            <br>
+            <input type="radio" name="gender" value="Female">
+            <label for="gender">FeMale</label>
+            <br><br>
+            <input type="checkbox" name="grade" value="student"><label for="grade">Student</label>
+            <br>
+            <input type="checkbox" name="grade" value="Graduated"><label for="grade">Graduated</label>
+            <br>
+            <br>
+            <select name="University">
+                <option value="Route" selected>Route</option>
+                <option value="Cairo">Cairo</option>
+                <option value="AUC">AUC</option>
+                <option value="Web Development">Web Development</option>
+            </select>
+
+            <br>
+            <!--submit-->
+            <button type="submit" style="color:#fff;background: linear-gradient(#fff,#000);">SUBMIT</button>
+            <br><br><br><br>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
