@@ -272,7 +272,7 @@ if (percen <= 100 && percen >= 90) {
 
 var userNumberOne = Number(prompt('Enter first number'));
 var userNumberOp = prompt('Enter [ + ] or [ - ] or [ * ] or [ / ]');
-var userNumberTwo = Number(prompt('Enter first number'));
+var userNumberTwo = Number(prompt('Enter 2nd number'));
 
 
 switch (userNumberOp) {
