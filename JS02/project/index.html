@@ -56,27 +56,35 @@
             <input id="productCat" class="form-control" type="text" name="category">
         </div>
         <div class="form-group">
-            <label for="productDesc">Product Name</label>
+            <label for="productDesc">Product Description</label>
             <textarea name="Description" id="productDesc" class="form-control"></textarea>
         </div>
 
         <button type="submit" class="btn btn-info" onclick="addProduct()">Add Product</button>
+        <button type="submit" class="btn btn-info mx-3" onclick="updateSlice()">Update Product</button>
 
     </div>
 
 
+
+
     <div class="container mt-5">
 
-        <table class="table mt-5 mx-auto table-hover" id="ourProducs">
+        <div class="testy">
+            <input class="form-control my-5 w-50 mx-auto searchBox" id="searchBox" type="text" name="searchBox"
+                placeholder="Search .." onkeyup="searchProduct(this.value)"></div>
+
+        <table class="table mt-5 mx-auto table-hover" id="ourProducts">
             <thead>
                 <th>index</th>
                 <th>ProductName</th>
                 <th>ProductPrice</th>
                 <th>ProductDes</th>
+                <th>Category</th>
                 <th>Update</th>
                 <th>delete</th>
             </thead>
-            <tbody id="productdata">
+            <tbody id="tableBody">
 
             </tbody>
         </table>

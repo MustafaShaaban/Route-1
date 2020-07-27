@@ -1,11 +1,11 @@
 /*
 *
 *
-*        Theme Name      : xxxx
-*        Author          : xxxxxxxx
-*        License         : https://bootstrapmade.com/license/
-*        Theme Coder     : Wael Mohamed 
-*        Code Version    : 0.0.0
+*        Project Name    : Product Table
+*        Author          : Route Academy
+*        License         : https://gitub.io
+*        Coder           : Wael Mohamed 
+*        Code Version    : 1.0.1
 *
 *
 **/
@@ -15,7 +15,7 @@
 /* Main Css Rules  for Main Elements in The project */
 
 
-body{
+body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -28,8 +28,27 @@ body{
 
 /*********** Start Header *************/
 
+.testy {
+    position: relative !important;
+}
 
 
+.testy::after {
+    content: '\E810';
+    font-family: "fontello";
+    top: 0;
+    right: 25%;
+    height: 100%;
+    width: 50px;
+    border-left: 1px solid #ced4da;
+    position: absolute;
+    line-height: 40px;
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #6c77e4;
+    
+}
 
 
 
