@@ -76,7 +76,7 @@ header h1 {
 
 
 .favicon {
-    width: 100px !important;
+    width: 50px !important;
     text-align: center;
 }
 
@@ -87,7 +87,18 @@ header h1 {
 
 
 
+@media all and (max-width:480px) {
+    .visit-span {
+        display: none;
+    }
+}
 
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .visit-span {
+        display: none;
+    }
+}
 
 
 

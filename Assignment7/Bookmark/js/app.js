@@ -153,13 +153,13 @@ function displayUrls() {
                     <div class="name-site d-flex justify-content-around align-items-center">
                         <div class="img-name col-7">
 							<div class="favicon"><img src="${getIco(i)}" class="img-fluid"></div>
-							<h5 class="ml-2 text-capitalize mx-2">${siteUrls[i].name}</h5>
+							<h5 class="text-capitalize mx-auto">${siteUrls[i].name}</h5>
 						</div>
                         <div class="visit-site  text-center col-3">
                             <a href="${
 															siteUrls[i].url
 														}" class="btn btn-primary btn-sm " type="button"
-                                target="_blank">visit<i class="icon-logout mx-1"></i></a>
+                                target="_blank"><span class="visit-span">visit</span><i class="icon-logout mx-1"></i></a>
                         </div>
                         <div class="del-site text-center col-2">
                             <button class="btn btn-danger btn-sm" type="button" onclick="delUrl(${i})"><i
