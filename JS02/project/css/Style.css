@@ -1,11 +1,11 @@
 /*
 *
 *
-*        Project Name    : Product Table
+*        Project Name    : Products Table
 *        Author          : Route Academy
-*        License         : https://gitub.io
+*        License         : https://wmoh-dev.github.io/Route/JS02/project/
 *        Coder           : Wael Mohamed 
-*        Code Version    : 1.0.1
+*        Code Version    : 1.1.0
 *
 *
 **/
@@ -15,12 +15,12 @@
 /* Main Css Rules  for Main Elements in The project */
 
 
+
 body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
-
 
 
 /*  End of Main Css Rules  */
@@ -47,6 +47,8 @@ body {
     text-align: center;
     color: #ffffff;
     background-color: #6c77e4;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 
 }
 

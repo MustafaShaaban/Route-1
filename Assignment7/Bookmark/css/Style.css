@@ -1,0 +1,115 @@
+/*
+*
+*
+*        Theme Name      : xxxx
+*        Author          : xxxxxxxx
+*        License         : https://bootstrapmade.com/license/
+*        Theme Coder     : Wael Mohamed 
+*        Code Version    : 0.0.0
+*
+*
+**/
+
+
+
+/* Main Css Rules  for Main Elements in The project */
+
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'cairo', 'Open Sans', sans-serif !important;
+}
+
+
+
+/*  End of Main Css Rules  */
+
+header h1 {
+    font-family: 'Anton', sans-serif !important;
+}
+
+/*********** Start main-input *************/
+
+.main-input h3 {
+    font-family: 'Staatliches', cursive;
+}
+
+.main-input label {
+    font-family: 'Fredoka One', cursive;
+}
+
+.bg-inputs {
+    background-color: #f1f1f1;
+}
+
+.exist {
+    /*display: none;
+    */
+    position: relative;
+    transition: 1s all;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    -o-transition: 1s all;
+}
+
+.exist::before {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    left: .3125rem;
+    border-right: .625rem solid transparent;
+    border-left: .625rem solid transparent;
+    border-bottom: .625rem solid #f8d7da;
+}
+
+
+
+
+.img-name {
+    display: flex;
+    place-items: center;
+
+}
+
+
+.favicon {
+    width: 100px !important;
+    text-align: center;
+}
+
+.favicon img {
+    max-height: 50px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/************* Footer ***************/
+
+
+footer .icon-heart-filled::before {
+    animation: beat 500ms ease infinite;
+
+}
+
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.25);
+    }
+
+}

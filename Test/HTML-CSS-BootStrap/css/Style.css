@@ -1,0 +1,409 @@
+/*
+*
+*
+*        Theme Name      : Bezel Template
+*        Author          : HodyLab
+*        License         : https://bezel-exam.netlify.app/
+*        Theme Coder     : Wael Mohamed 
+*        Code Version    : 1.0.0
+*
+*
+*/
+
+
+/*
+
+Table of Contents
+│
+├──  01- Main CSS rules
+│     ├── My Own Classes (mini framework) 
+│     └── common styles
+├──  02- Header
+│     ├── Crousal overwrite
+│     └── custom styles
+├──  03- WhoWeAre section
+├──  04- CreativeTeam section
+├──  05- WhatWeDO Section
+├──  06- Prices Section
+│     └── Customers
+├──  07- Footer
+└──  08 - Media Query rules
+
+*/
+
+
+
+/* 01- Main Css Rules  for Main Elements in The project */
+
+:root {
+    --mainColor: #00C3DA;
+    --SecColor: #626262;
+}
+
+.mainColor {
+    color: #00C3DA;
+}
+
+.SecColor {
+    color: #626262;
+}
+
+.subFontColor {
+    color: #969696;
+}
+
+
+.mainFont {
+    font-family: 'Poppins', sans-serif;
+}
+
+.b-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.xs--f {
+    font-size: .8125rem;
+}
+
+.s--f {
+    font-size: .875rem;
+}
+
+.m--f {
+    font-size: 1.125rem;
+}
+
+.l--f {
+    font-size: 1.5rem;
+}
+
+.xl--f {
+    font-size: 2.375rem;
+}
+
+
+/** Common styles **/
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body::-webkit-scrollbar {
+    width: .3125rem;
+    border: 1px solid #66cc66;
+
+}
+
+
+
+
+/*  End of Main Css Rules  */
+
+
+/* -02 *********** Start Header *************/
+
+/*** crousal overwrite ***/
+
+header .carousel-control-next {
+    height: 3.125rem;
+    width: 3.125rem;
+    left: 0;
+    top: 50%;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+}
+
+
+header .carousel-control-prev {
+    height: 3.125rem;
+    width: 3.125rem;
+    left: 0;
+    top: 42.5%;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+header .carousel-caption {
+    top: 35%;
+}
+
+header .img1 {
+    background: url(../images/bg-image-28.jpg) center center/cover no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+header .img2 {
+    background: url(../images/bg-image-29.jpg) center center/cover no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+
+header .navbar .navbar-brand img {
+    max-height: 2.5rem;
+}
+
+header .overlay {
+    position: relative;
+}
+
+header .overlay::after {
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+
+.navbar {
+    padding-bottom: 0.96rem;
+}
+
+.border-md-right {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mainHead {
+    font-size: 6.25rem;
+    font-weight: 700;
+
+}
+
+.header-btn {
+    padding: 14px 30px;
+}
+
+
+/*03- *********** WhoWeAre ************/
+
+
+.btn-border {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+}
+
+
+/* 04- ******* CreativeTeam ***********/
+
+
+.h-after {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    top: 0px;
+    left: 50%;
+    opacity: 0.1;
+    font-size: 80px;
+    line-height: 20px;
+    font-family: 'Poppins', sans-serif;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+
+.img-hover {
+    bottom: 0;
+    background-color: var(--mainColor);
+    height: 0;
+    opacity: 0;
+    transition: 500ms all;
+    -webkit-transition: 500ms all;
+    -moz-transition: 500ms all;
+    -ms-transition: 500ms all;
+    -o-transition: 500ms all;
+}
+
+.img-team-1:hover .img-hover {
+    height: 100%;
+    opacity: 0.8;
+}
+
+
+
+
+.img-team-2:hover .img-hover {
+    height: 100%;
+    opacity: 0.8;
+}
+
+.img-team-3:hover .img-hover {
+    height: 100%;
+    opacity: 0.8;
+}
+
+.img-team-4:hover .img-hover {
+    height: 100%;
+    opacity: 0.8;
+}
+
+
+
+/* 05- ****** WhatWeDO *********/
+
+
+.whatWeDo {
+    background-color: var(--SecColor);
+}
+
+.border-icon {
+    -webkit-text-stroke: 3px #fff;
+    color: #00AC9E;
+    font-size: 2.5rem;
+
+}
+
+
+.w-before {
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -10px;
+    opacity: 0.1;
+    font-size: 80px;
+    line-height: 20px;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+
+.list-none {
+    list-style: none;
+}
+
+
+
+/*06- ******* Prices ************/
+
+
+.prices {
+    background-color: #F7F7F7;
+}
+
+
+.plan-price h2 {
+    font-size: 3.125rem;
+}
+
+
+
+.price-active {
+    transform: scale(1.05, 1.05);
+    -webkit-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    -o-transform: scale(1.05, 1.05);
+}
+
+
+
+.badge-price {
+    top: 2.5rem;
+    right: 1.875rem;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 300;
+    background-color: var(--mainColor);
+
+}
+
+
+/**** cutomers ****/
+.cst-img {
+    width: 100px;
+    margin-top: -50px;
+
+}
+
+.cst-p {
+    font-weight: 200;
+    font-size: 1.125rem;
+}
+
+
+/** 07- ********* Footer ***************/
+
+
+.g-after {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    top: 0px;
+    left: 0;
+    opacity: 0.1;
+    font-size: 80px;
+    line-height: 20px;
+    font-family: 'Poppins',
+        sans-serif;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.cst-text {
+    height: 100px !important;
+}
+
+
+.f-btn {
+    background-color: var(--mainColor);
+}
+
+/** 08- Media Query rules *************/
+
+
+
+@media all and (max-width:990px) {
+    .navbar-nav {
+        background-color: #fff !important;
+
+    }
+
+    .nav-link {
+        color: #000 !important;
+        padding-left: .9375rem !important;
+    }
+
+    .nav-hide {
+        display: none !important;
+    }
+
+    .b-bottom {
+        border: hidden;
+    }
+
+
+    .price-active {
+        transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+    }
+
+    .mainHead {
+        font-size: 30px;
+    }
+}
