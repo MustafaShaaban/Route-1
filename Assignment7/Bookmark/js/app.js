@@ -22,9 +22,8 @@
 ├── 5- creating an empty array to get all the object values
 ├── 6- push all the values to my array just created.
 ├── 7- Display My inputs on my main HTML Area
-│   ├── 8- add my var which contain and increment all user inputs to the HTML container
-│   └── 9- invoke displayURLS to display the sites in the HTML container.
-│	
+│    └── 8- add my var which contain and increment all user inputs to the HTML container
+│   
 ├── 10- Create Clear function
 ├── 13- Check if there're a stored values or not
 │   ├── if no  => start with an empty array
