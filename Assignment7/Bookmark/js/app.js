@@ -211,7 +211,7 @@ document.addEventListener("keypress", function (e) {
 
 function getIco(w) {
 	var str = siteUrls[w].url;
-	var sitesExtentions = [".com", ".net", ".co", ".org", ".gov", "info"];
+	var sitesExtentions = [".com", ".net", ".co", ".org", ".gov", ".info", ".me"];
 	for (let i = 0; i < sitesExtentions.length; i++) {
 		if (str.includes(sitesExtentions[i])) {
 			var comLocation = str.search(sitesExtentions[i]);
