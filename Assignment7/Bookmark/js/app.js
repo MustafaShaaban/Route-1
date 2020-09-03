@@ -38,21 +38,25 @@
 
 //  1- Creating my vars
 
-var siteNameInput = document.getElementById("name-input");
-var siteUrlInput = document.getElementById("site-input");
-var addBtn = document.getElementById("new-submit");
-var delBtn = document.getElementById("deletesite");
-var nameExist = document.getElementById("name-exist");
-var siteExist = document.getElementById("URL-exist");
+var siteNameInput = document.getElementById('name-input');
+var siteUrlInput = document.getElementById('site-input');
+var addBtn = document.getElementById('new-submit');
+var delBtn = document.getElementById('deletesite');
+var nameExist = document.getElementById('name-exist');
+var siteExist = document.getElementById('URL-exist');
 
 // 13 - Check if there're a stored values or not
-if (localStorage.getItem("myBookesSites") == null) {
+
+if (localStorage.getItem('myBookesSites') == null) {
 	siteUrls = [];
+	console.log('theres no data here');
 } else {
-	siteUrls = JSON.parse(localStorage.getItem("myBookesSites"));
+	siteUrls = JSON.parse(localStorage.getItem('myBookesSites'));
 	// then display the storage values
 	displayUrls();
+	console.log('theres data here');
 }
+
 // 2- my main function
 function addSite() {
 	// validate Inputs
@@ -68,7 +72,7 @@ function addSite() {
 		// 6- push all the values to my array
 		siteUrls.push(siteInfo);
 		//12- Set the values on the local storage
-		localStorage.setItem("myBookesSites", JSON.stringify(siteUrls));
+		localStorage.setItem('myBookesSites', JSON.stringify(siteUrls));
 		//9- invoke displayURLS to display the sites in the container
 		displayUrls();
 		//11- call the clear function after display
@@ -77,28 +81,28 @@ function addSite() {
 		hideFn();
 	} else {
 		if (validName(SName) != true) {
-			nameExist.style.cssText = "display:block !important";
+			nameExist.style.cssText = 'display:block !important';
 		}
 		if (validName(ULink) != true) {
-			siteExist.style.cssText = "display:block !important";
+			siteExist.style.cssText = 'display:block !important';
 		}
 		if (SName == null || ULink == null) {
-			alert("These fieds are required");
+			alert('These fieds are required');
 			return false;
 		}
-		if (SName == "" || ULink == "") {
-			alert("Name and Url must be filled out");
+		if (SName == '' || ULink == '') {
+			alert('Name and Url must be filled out');
 			return false;
 		}
 	}
 }
 
 // 4- new event after clicking on submit
-addBtn.addEventListener("click", addSite);
+addBtn.addEventListener('click', addSite);
 
 // 5- creating an empty array to get all the object values
-var siteUrls = [];
-//var siteUrls;
+//var siteUrls = [];
+var siteUrls;
 
 /* 
 function validateInputs() {
@@ -118,7 +122,7 @@ function validateInputs() {
 // 17- Validate the name and the url by creating functions
 // validate the name
 function validName(x) {
-	if (x == "" || x == null) {
+	if (x == '' || x == null) {
 		return false;
 	}
 	for (var i = 0; i < siteUrls.length; i++) {
@@ -129,58 +133,63 @@ function validName(x) {
 
 // validate the url
 function validUrl(y) {
-	if (y == "" || y == null) {
+	if (y == '' || y == null) {
 		return false;
 	}
 	for (var i = 0; i < siteUrls.length; i++) {
 		if (siteUrls[i].url === y) return false;
 	}
+	//validEx(y);
 	return true;
 }
 
 // 20- Hide the alert msg
 function hideFn() {
-	nameExist.style.cssText = "display:none !important";
-	siteExist.style.cssText = "display:none !important";
+	nameExist.style.cssText = 'display:none !important';
+	siteExist.style.cssText = 'display:none !important';
 }
 
 // 7- Display My inputs on my main Area
 function displayUrls() {
-	var sites = "";
+	var sites = '';
 	for (let i = 0; i < siteUrls.length; i++) {
 		sites += `<div class="col-12 col-md-6 my-2">
-                    <div class="name-site d-flex justify-content-around align-items-center">
-                        <div class="img-name col-7">
-							<div class="favicon"><img src="${getIco(i)}" class="img-fluid"></div>
+				<div class="name-site d-flex justify-content-around align-items-center">
+					<div class="img-name col-7">
+							<div class="favicon">
+								<a href="${siteUrls[i].url}" target="_blank">
+									<img src="${getIco(i)}" class="img-fluid">
+								</a>
+							</div>
 							<h5 class="text-capitalize mx-auto">${siteUrls[i].name}</h5>
-						</div>
-                        <div class="visit-site  text-center col-3">
-                            <a href="${
-															siteUrls[i].url
-														}" class="btn btn-primary btn-sm " type="button"
-                                target="_blank"><span class="visit-span">visit</span><i class="icon-logout mx-1"></i></a>
-                        </div>
-                        <div class="del-site text-center col-2">
-                            <button class="btn btn-danger btn-sm" type="button" onclick="delUrl(${i})"><i
-                                    class="icon-trash mx-1"></i></button>
-                        </div>
-                    </div>
-                </div>`;
+					</div>
+					<div class="visit-site  text-center col-3">
+							<a href="${
+								siteUrls[i].url
+							}" class="btn btn-primary btn-sm " type="button" target="_blank">
+								<span class="visit-span">visit</span><i class="icon-logout mx-1"></i></a>
+					</div>
+					<div class="del-site text-center col-2">
+							<button class="btn btn-danger btn-sm" type="button" onclick="delUrl(${i})"><i
+									class="icon-trash mx-1"></i></button>
+					</div>
+				</div>
+			</div>`;
 	}
 	// 8- add my var which contain all user inputs to the HTML container
-	document.getElementById("info-container").innerHTML = sites;
+	document.getElementById('info-container').innerHTML = sites;
 	//console.log(siteUrls);
 }
 
 // 10- Create Clear function
 function clearForm() {
-	(siteNameInput.value = ""), (siteUrlInput.value = "");
+	(siteNameInput.value = ''), (siteUrlInput.value = '');
 }
 
 //14- Del function
 function delUrl(i) {
 	siteUrls.splice(i, 1);
-	localStorage.setItem("myBookesSites", JSON.stringify(siteUrls));
+	localStorage.setItem('myBookesSites', JSON.stringify(siteUrls));
 	displayUrls();
 }
 
@@ -190,17 +199,17 @@ function delUrl(i) {
 //16- Creating function to add http or https to the url
 function appendHttps() {
 	if (
-		siteUrlInput.value.includes("https://") ||
-		siteUrlInput.value.includes("http://")
+		siteUrlInput.value.includes('https://') ||
+		siteUrlInput.value.includes('http://')
 	) {
 		siteUrlInput.value = siteUrlInput.value;
 	} else {
-		siteUrlInput.value = "https://" + siteUrlInput.value;
+		siteUrlInput.value = 'https://' + siteUrlInput.value;
 	}
 }
 
 // 18- Enter to add
-document.addEventListener("keypress", function (e) {
+document.addEventListener('keypress', function (e) {
 	if (e.keyCode == 13) {
 		addSite();
 	}
@@ -210,7 +219,7 @@ document.addEventListener("keypress", function (e) {
 
 function getIco(w) {
 	var str = siteUrls[w].url;
-	var sitesExtentions = [".com", ".net", ".co", ".org", ".gov", ".info", ".me"];
+	var sitesExtentions = ['.com', '.net', '.co', '.org', '.gov', '.info', '.me'];
 	for (let i = 0; i < sitesExtentions.length; i++) {
 		if (str.includes(sitesExtentions[i])) {
 			var comLocation = str.search(sitesExtentions[i]);
@@ -219,4 +228,15 @@ function getIco(w) {
 			return res;
 		}
 	}
+}
+
+//
+function validEx(y) {
+	var ex = ['.com', '.net', '.org'];
+	for (var i = 0; i < ex.length; i++) {
+		if (y.includes(ex[i]) == true) {
+			return true;
+		}
+	}
+	return false;
 }
