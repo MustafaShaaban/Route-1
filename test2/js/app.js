@@ -206,29 +206,41 @@ let rgbSec = document.getElementById('js--rgb'),
 	bColor = document.getElementById('b--section');
 
 rColor.addEventListener('mouseover', () => {
+	let svgR = document.getElementById('svg_r');
+	svgR.style.fill = 'white';
 	rgbSec.style.backgroundColor = 'red';
 });
 
 rColor.addEventListener('mouseout', () => {
+	let svgR = document.getElementById('svg_r');
 	rgbSec.style.backgroundColor = 'white';
+	svgR.style.fill = 'red';
 });
 
 //G settings
 gColor.addEventListener('mouseover', () => {
+	let svgG = document.getElementById('svg_g');
+	svgG.style.fill = 'white';
 	rgbSec.style.backgroundColor = 'green';
 });
 
 gColor.addEventListener('mouseout', () => {
+	let svgG = document.getElementById('svg_g');
 	rgbSec.style.backgroundColor = 'white';
+	svgG.style.fill = 'green';
 });
 
 //b settings
 bColor.addEventListener('mouseover', () => {
+	let svgB = document.getElementById('svg_b');
+	svgB.style.fill = 'white';
 	rgbSec.style.backgroundColor = 'blue';
 });
 
 bColor.addEventListener('mouseout', () => {
+	let svgB = document.getElementById('svg_b');
 	rgbSec.style.backgroundColor = 'white';
+	svgB.style.fill = 'blue';
 });
 
 // Validation
