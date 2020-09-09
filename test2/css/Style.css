@@ -60,25 +60,28 @@ body {
 /*********** Start Header *************/
 
 @media all and (min-width: 769px) and (max-width: 992px) {
-	.text {
-		font-size: 5em;
+	.text-sm {
+		font-size: 5em !important;
 	}
 }
 
 @media all and (min-width: 601px) and (max-width: 768px) {
-	.text {
-		font-size: 4.5em;
+	.text-sm {
+		font-size: 4.5em !important;
 	}
 }
 
 @media all and (max-width: 600px) {
-	.text {
-		font-size: 2em;
+	.text-sm {
+		font-size: 3em !important;
 	}
 }
 
 @media all and (min-width: 768px) {
 	.app .wrapper {
+		width: 75%;
+	}
+	.form--section .wrapper {
 		width: 75%;
 	}
 }
@@ -193,6 +196,7 @@ body {
 	padding: 2.5rem;
 	background-color: #fff;
 }
+
 /************* Footer ***************/
 
 footer .icon-heart-filled::before {
