@@ -168,6 +168,24 @@ body {
 	}
 }
 
+.r-g-b {
+	transition: all 1100ms;
+	-webkit-transition: all 1100ms;
+	-moz-transition: all 1100ms;
+	-ms-transition: all 1100ms;
+	-o-transition: all 1100ms;
+}
+
+#svg_r,
+#svg_b,
+#svg_g {
+	transition: all 900ms;
+	-webkit-transition: all 900ms;
+	-moz-transition: all 900ms;
+	-ms-transition: all 900ms;
+	-o-transition: all 900ms;
+}
+
 /**=== countdown section ==**/
 
 #count__down {
