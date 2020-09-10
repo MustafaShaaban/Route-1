@@ -52,7 +52,7 @@ let addTodo = function () {
 			'my-1',
 			'my-lg-0'
 		);
-		editInput_btn.classList.add('hide', 'hide');
+		editInput_btn.classList.add('hide');
 		editInput_btn.type = 'button';
 
 		let action_btns = document.createElement('DIV');
@@ -88,6 +88,7 @@ let addTodo = function () {
 				edit_btn.classList.remove('hide');
 			});
 		});
+		
 		let remove_btn = document.createElement('BUTTON');
 		remove_btn.classList.add('action-button');
 		remove_btn.classList.add(
