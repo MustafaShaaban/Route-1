@@ -271,7 +271,7 @@ userName.addEventListener('keyup', function () {
 // User Email validation
 userMail.addEventListener('keyup', function () {
 	let regex, userEmailAlert;
-	regex = /^[a-zA-Z0-9]{3,25}@[a-z]{4,10}.([a-z]{2,6})$/;
+	regex = /^[a-zA-Z0-9_\-\.]{3,25}@[a-z]{4,10}.([a-z]{2,6})$/;
 	userEmailAlert = document.getElementById('js--email--alert');
 	if (regex.test(userMail.value)) {
 		userMail.classList.remove('is-invalid');
