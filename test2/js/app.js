@@ -88,7 +88,7 @@ let addTodo = function () {
 				edit_btn.classList.remove('hide');
 			});
 		});
-		
+
 		let remove_btn = document.createElement('BUTTON');
 		remove_btn.classList.add('action-button');
 		remove_btn.classList.add(
@@ -145,10 +145,10 @@ hustlin.addEventListener('mouseover', () => {
 
 // countdown section
 
-// Most of The Code from W3school as we didnt take date() nor math() indetails on the course
+// Part of The Code from W3school
 
 // Set the date we're counting down to
-let countDownDate = new Date('Sep 20, 2020 18:00:00').getTime();
+let countDownDate = new Date('Sep 20, 2021 18:00:00').getTime();
 
 // Update the count down every 1 second
 let x = setInterval(function () {
@@ -349,5 +349,5 @@ new fullpage('#fullpage', {
 	showActiveTooltip: true,
 });
 
-//methods
+//methods from fullPage Plugin
 fullpage_api.setAllowScrolling(true);
