@@ -46,11 +46,11 @@
 
         <div class="form-group">
             <label for="productName">Product Name</label>
-            <input id="productName" class="form-control" type="text" name="product">
+            <input id="productName" class="form-control" type="text" name="product" required>
         </div>
         <div class="form-group">
             <label for="productPrice">Product Price</label>
-            <input id="productPrice" class="form-control" type="text" name="price">
+            <input id="productPrice" class="form-control" type="number" name="price" required>
         </div>
         <div class="form-group">
             <label for="productCat">Product Category</label>
@@ -61,8 +61,9 @@
             <textarea name="Description" id="productDesc" class="form-control"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-info" onclick="addProduct()">Add Product</button>
-        <button type="submit" class="btn btn-info mx-3" onclick="updateSlice()">Update Product</button>
+        <button type="submit" class="btn btn-info" onclick="addProduct()" id="add--btn">Add Product</button>
+        <button type="submit" class="btn btn-info d-none" onclick="updateSlice()" id="update--btn">Update
+            Product</button>
 
     </div>
 

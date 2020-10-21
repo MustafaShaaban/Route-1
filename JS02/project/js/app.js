@@ -64,6 +64,14 @@ function addProduct() {
 		category: productCategoryInput.value,
 		description: productDescInput.value,
 	};
+	if (
+		product.name === '' ||
+		product.price === '' ||
+		product.category === '' ||
+		product.description === ''
+	) {
+		return alert('Some fields are missing');
+	}
 	// step 4 [ push every product values to this array that will prevent any previous values to be deleted and the result will be Array of objects]
 	productList.push(product);
 	// step 10 Save all the produclist values to the localstorage before displaying it.
@@ -110,12 +118,16 @@ function deleteProduct(index) {
 
 // TODO   adding this comment to the above steps
 // function to get the selected item values and shows em back on the form
+const updateBtn = document.getElementById('update--btn');
+const primaryAddBtn = document.getElementById('add--btn');
 
 function updateProduct(index) {
 	productNameInput.value = productList[index].name;
 	productPriceInput.value = productList[index].price;
 	productCategoryInput.value = productList[index].category;
 	productDescInput.value = productList[index].description;
+	updateBtn.classList.remove('d-none');
+	primaryAddBtn.classList.add('d-none');
 
 	// create a global var to get and save the index of the selected item
 	productIndex = productList.indexOf(productList[index]);
@@ -130,6 +142,8 @@ function updateSlice() {
 	productList[productIndex].category = productCategoryInput.value;
 	productList[productIndex].description = productDescInput.value;
 	// productList.splice(productIndex, 1, productList[productIndex]);
+	updateBtn.classList.add('d-none');
+	primaryAddBtn.classList.remove('d-none');
 	localStorage.setItem('ourProducts', JSON.stringify(productList));
 	displayProduct();
 	clearForm();
@@ -158,36 +172,38 @@ function searchProduct(x) {
 	}
 }
 
-function validatProductName(productName) {
-	var regex = /^[A-Z][a-z]{3, 5}$/;
-	if (regex.test(productName) == true) {
-		productNameAlert.classList.replace('d-block', 'd-none');
-		productNameinput.classList.remove('is-invalid');
-		productNameinput.classList.add('is-valid');
-	} else {
-		productNameAlert.classList.replace('d-none', 'd-block');
-		productNameinput.classList.remove('is-valid');
-		productNameinput.classList.add('is-invalid');
-	}
-}
+// TODO
 
-productNameInput.addEventListener('keyup', function () {
-	validatProductName(productNameInput.value);
-});
+// function validatProductName(productName) {
+// 	var regex = /^[A-Z][a-z]{3, 5}$/;
+// 	if (regex.test(productName) == true) {
+// 		productNameAlert.classList.replace('d-block', 'd-none');
+// 		productNameinput.classList.remove('is-invalid');
+// 		productNameinput.classList.add('is-valid');
+// 	} else {
+// 		productNameAlert.classList.replace('d-none', 'd-block');
+// 		productNameinput.classList.remove('is-valid');
+// 		productNameinput.classList.add('is-invalid');
+// 	}
+// }
 
-function validatPrice(productPrice) {
-	var regex = /^[1-9][0-9]{2, 3}$|10000$/;
-	if (regex.test(productPrice) == true) {
-		productPriceAlert.classList.replace('d-block', 'd-none');
-		productPriceAlert.classList.remove('is-invalid');
-		productPriceAlert.classList.add('is-valid');
-	} else {
-		productPriceAlert.classList.replace('d-none', 'd-block');
-		productPriceAlert.classList.remove('is-valid');
-		productPriceAlert.classList.add('is-invalid');
-	}
-}
+// productNameInput.addEventListener('keyup', function () {
+// 	validatProductName(productNameInput.value);
+// });
 
-productPriceInput.addEventListener('keyup', function () {
-	validatPrice(productPriceInput.value);
-});
+// function validatPrice(productPrice) {
+// 	var regex = /^[1-9][0-9]{2, 3}$|10000$/;
+// 	if (regex.test(productPrice) == true) {
+// 		productPriceAlert.classList.replace('d-block', 'd-none');
+// 		productPriceAlert.classList.remove('is-invalid');
+// 		productPriceAlert.classList.add('is-valid');
+// 	} else {
+// 		productPriceAlert.classList.replace('d-none', 'd-block');
+// 		productPriceAlert.classList.remove('is-valid');
+// 		productPriceAlert.classList.add('is-invalid');
+// 	}
+// }
+
+// productPriceInput.addEventListener('keyup', function () {
+// 	validatPrice(productPriceInput.value);
+// });
