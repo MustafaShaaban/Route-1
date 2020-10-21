@@ -18,13 +18,25 @@ echo "<hr/>";
 //===== Task [2] ======//
 /* Print yes if you find Avatar movie */
 
-$films=array("Fast","Predestination","avatar","Pursuit","Prestige","avatar");
-
+$films=array("Fast","Predestination",'avatar',"Pursuit","Prestige",'gfgfg','sdsdsd','tested');
+$notFound= 0;
+$Found= 0;
 foreach ($films as $film) {
+	
 	if ($film == "avatar") {
 		echo "yes<br/>";
+		$Found++;
 		break;
 	}
+	if ($film != "avatar") {
+		$notFound++;
+		//continue;
+	}
+
+}
+
+if ($notFound > 0 && $Found == 0) {
+	echo 'No';
 }
 
 echo "<hr/>";
